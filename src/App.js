@@ -1,22 +1,14 @@
 import './App.css';
-
-const Threat = (props) => {
-  return (
-    <>
-      <h1> IDENTIFY YOURSELF TO THE {props.name ? props.name : "default"}</h1>
-      <h3> or prepare to face {props.threat ? props.threat : "destruction"}.</h3>
-    </>
-  )
-}
+import { useState } from 'react';
 
 const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (    
     <div className="App">
-        <Threat name = {"Dalek"} threat = {"annihilation"}/>
-        <Threat name = {"CyberMen"} />
-        <Threat name = {"Dark lord"} />
-        <Threat threat = {2+2}/>
-        <Threat/>
+        <button onClick = {()=> setCounter(counter - 1)}>-</button>
+        <h1>{counter}</h1>
+        <button onClick = {()=> setCounter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
 }
