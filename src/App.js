@@ -1,8 +1,12 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+
+  useEffect(()=>{
+    setCounter(100);
+  }, []);
 
   return (    
     <div className="App">
