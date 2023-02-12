@@ -1,10 +1,10 @@
 import './App.css';
 
-const DalekThreat = () => {
+const Threat = (props) => {
   return (
     <>
-      <span> IDENTIFY YOURSELF TO THE DALEK</span>
-      <div> or prepare to face destruction.</div>
+      <h1> IDENTIFY YOURSELF TO THE {props.name ? props.name : "default"}</h1>
+      <h3> or prepare to face {props.threat ? props.threat : "destruction"}.</h3>
     </>
   )
 }
@@ -12,7 +12,11 @@ const DalekThreat = () => {
 const App = () => {
   return (    
     <div className="App">
-        <DalekThreat/>
+        <Threat name = {"Dalek"} threat = {"annihilation"}/>
+        <Threat name = {"CyberMen"} />
+        <Threat name = {"Dark lord"} />
+        <Threat threat = {2+2}/>
+        <Threat/>
     </div>
   );
 }
