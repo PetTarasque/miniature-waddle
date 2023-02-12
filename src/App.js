@@ -1,22 +1,18 @@
 import './App.css';
 
-const App = () => {
-  const name = null;
-  const isNameShowing = false;
+const DalekThreat = () => {
+  return (
+    <>
+      <span> IDENTIFY YOURSELF TO THE DALEK</span>
+      <div> or prepare to face destruction.</div>
+    </>
+  )
+}
 
+const App = () => {
   return (    
     <div className="App">
-      <h1>Hello, {5*6}</h1>
-      {name ? (
-        <>
-          whe know who you are {name}.
-        </>
-      ) : (
-        <>
-        <span> IDENTIFY YOURSELF TO THE DALEK</span>
-        <div> or prepare to face destruction.</div>
-        </>
-      )}
+        <DalekThreat/>
     </div>
   );
 }
